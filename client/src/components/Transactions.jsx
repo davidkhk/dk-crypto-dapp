@@ -57,7 +57,7 @@ const Transactions = () => {
                 {currentAccount ? (
                     <h3 className="text-white text-3xl text-center my-2">Latest transactions</h3>
                 ) : (
-                    <h3 className="text-white text-3xl text-center my-2">Connect yout account to see the latest changes</h3>
+                    <h3 className="text-white text-3xl text-center my-2">Connect your account to see the latest transactions</h3>
                 )}
 
                 <div className="flex flex-wrap justify-center items-center mt-10">
