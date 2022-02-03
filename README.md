@@ -9,8 +9,6 @@ This is a project I built following a YT tutorial. As a beginner, following good
 - How to write smart contracts on the Ethereum network using the Solidity programming language
 - Styling with Tailwind CSS
 
-Link for the original tutorial: https://www.youtube.com/watch?v=Wn_Kb3MR_cU&t=7849s
-
 Demo: [DK Crypto app](https://dk-crypto-dapp.netlify.app)
 
 If you're actually testing the funcionalities, please allow ample time for transations to go through as the website was hosted on Netlify for free.
