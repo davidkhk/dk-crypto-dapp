@@ -2,7 +2,7 @@
 
 ![](https://github.com/davidkhk/personal-portfolio/blob/netlify/src/assets/crypto-dapp.gif)
 
-Web 1.0 was good, an information super highway of documents connected by hyperlinks. Around 2004, web 2.0 emerged where more people started to participate in te web with platforms like Facebook, Youtube and Twitter. Gigantic centralized tech corporations like Google and Amazon dominated the flow of information and money on the internet.
+Web 1.0 was good, an information super highway of documents connected by hyperlinks. Around 2004, web 2.0 emerged where more people started to participate in the web with platforms like Facebook, Youtube and Twitter. Gigantic centralized tech corporations like Google and Amazon dominated the flow of information and money on the internet.
 
 We're now on the tipping point of web 3.0, a descentralized but secure internet where people can exchange money and information without the need of an unnecessary middle man like a bank or tech corporation.
 
