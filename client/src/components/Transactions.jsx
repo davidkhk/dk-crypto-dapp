@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 
-
 import { TransactionContext } from '../context/TransactionContext';
 
 import dummyData from '../utils/dummyData';
+// We used this dummyData to work on this section before having actual transactios data.
 import { shortenAddress } from '../utils/shortenAddress';
 import useFetch from '../hooks/useFetch';
 
@@ -11,6 +11,8 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, 
     
     const gifUrl = useFetch({ keyword })
 
+    // The transactionCard shows details of each transaction including a link to its etherscan page.
+    // Each transaction is paired with a funny gif that is fetched from giphy.com API.
     return (
         <div className="bg-[#181918] m-4 flex flex-1
             2xl:min-w-[450px]
@@ -54,6 +56,7 @@ const Transactions = () => {
     return (
         <div className="flex w-full justify-center items-center 2xl:px-20 gradient-bg-transactions">
             <div className="flex flex-col md:p-12 py-12 px-4">
+                {/* We show different titles depending on whether the user has an account connected. */}
                 {currentAccount ? (
                     <h3 className="text-white text-3xl text-center my-2">Latest transactions</h3>
                 ) : (
@@ -61,6 +64,7 @@ const Transactions = () => {
                 )}
 
                 <div className="flex flex-wrap justify-center items-center mt-10">
+                    {/* We map over the transactions and reverse their order to show the latest first. */}
                     {transactions.reverse().map((transaction, i) => (
                         <TransactionCard key={i} {...transaction} />
                     ))}

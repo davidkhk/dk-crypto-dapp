@@ -28,6 +28,7 @@ const Welcome = () => {
 
         e.preventDefault();
 
+        // We need to check if the user completely filled out the form.
         if(!addressTo || !amount || !keyword || !message) return;
 
         sendTransaction();
@@ -43,6 +44,7 @@ const Welcome = () => {
                     <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
                         Explore the crypto world. Buy and sell crypto easily on Krypto
                     </p>
+                    {/* We only show the "Connect wallet" button if there's no wallet connected */}
                     {!currentAccount && (
                     <button
                         type="button"
@@ -69,12 +71,12 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-
+                {/* Below is the beautiful colorful ethereum card. */}
                 <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
                     <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism">
                         <div className="flex justify-between flex-col w-full h-full">
                             <div className="flex justify-between items-start">
-                                <div className="w-10 h-10 rounded-full border 2 border-white flex justify-center items-center">
+                                <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
                                     <SiEthereum fontSize={21} color="#fff" />
                                 </div>
                                 <BsInfoCircle fontSize={17} color="#fff" />
@@ -89,28 +91,27 @@ const Welcome = () => {
                             </div>
                         </div>
                     </div>
+                    {/* Below is our cool looking form. */}
+                    <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+                        <Input placeholder="Address to" name="addressTo" type="text" handleChange={handleChange} />
+                        <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
+                        <Input placeholder="Keyword (gif)" name="keyword" type="text" handleChange={handleChange} />
+                        <Input placeholder="Enter message" name="message" type="text" handleChange={handleChange} />
 
-                        <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
-                            <Input placeholder="Address to" name="addressTo" type="text" handleChange={handleChange} />
-                            <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
-                            <Input placeholder="Keyword (gif)" name="keyword" type="text" handleChange={handleChange} />
-                            <Input placeholder="Enter message" name="message" type="text" handleChange={handleChange} />
+                        <div className="h-[1px] w-full bg-gray-400 my-2" />
 
-                            <div className="h-[1px] w-full bg-gray-400 my-2" />
-
-                            {isLoading ? (
-                                <Loader />
-                            ) : (
-                                <button
-                                type="button"
-                                onClick={handleSubmit}
-                                className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursos-pointer"
-                                >
-                                Send now
-                                </button>
-                            )}
-                        </div>
-
+                        {isLoading ? (
+                            <Loader />
+                        ) : (
+                            <button
+                            type="button"
+                            onClick={handleSubmit}
+                            className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursos-pointer"
+                            >
+                            Send now
+                            </button>
+                        )}
+                    </div>
                 </div>
 
             </div>

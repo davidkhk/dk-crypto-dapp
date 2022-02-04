@@ -1,4 +1,5 @@
 require('@nomiclabs/hardhat-waffle');
+// hardhat-waffle is a plugin to build smart contract tests.
 
 module.exports = {
   solidity: '0.8.0',
