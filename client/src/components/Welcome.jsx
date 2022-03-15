@@ -107,9 +107,9 @@ const Welcome = () => {
                             <Loader />
                         ) : (
                             <button
-                            type="button"
-                            onClick={handleSubmit}
-                            className="text-sky-600 w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursos-pointer"
+                                type="button"
+                                onClick={handleSubmit}
+                                className="text-sky-600 w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursos-pointer hover:bg-[#ffffff]"
                             >
                             Send now
                             </button>

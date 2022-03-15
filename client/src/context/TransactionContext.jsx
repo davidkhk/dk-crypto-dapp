@@ -64,7 +64,7 @@ export const TransactionProvider = ({ children }) => {
     //The first thing we need to know is if the users have their MetaMask connected so that we can do everything we want to do. 
     const checkIfWalletisConnected = async () => {
         try {
-            if(!ethereum) return alert("Please install metamask");
+            if(!ethereum) return alert("Please install MetaMask");
 
             const accounts = await ethereum.request({method: 'eth_accounts' });
 
@@ -99,7 +99,7 @@ export const TransactionProvider = ({ children }) => {
     //If there's no wallet connected, users can click "Connect wallet" and have their MetaMask wallet connected.
     const connectWallet = async () => {
         try {
-            if(!ethereum) return alert("Please install metamask");
+            if(!ethereum) return alert("Please install MetaMask");
 
             const accounts = await ethereum.request({method: 'eth_requestAccounts' });
 
@@ -149,7 +149,7 @@ export const TransactionProvider = ({ children }) => {
             setIsLoading(false);
             console.log(`Success - ${transactionHash.hash}`);
 
-            // After the transaction is finished, we get the transactionCount and store in the state.
+            // After the transaction is finished, we get the transactionCount and store it in the state.
             const transactionCount = await transactionContract.getTransactionCount();
             
             setTransactionCount(transactionCount.toNumber());   

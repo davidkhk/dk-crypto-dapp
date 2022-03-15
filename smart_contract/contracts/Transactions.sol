@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
 pragma solidity ^0.8.0;
-// The keyword "pragma" is used to enable certain compiler features or checks.
+// The word "pragma" tells the compiler which version of Solidity to use.
 
 // The contract serves a purpose of a class in object orinted programming languages. 
 contract Transactions {
